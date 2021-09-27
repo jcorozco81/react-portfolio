@@ -9,7 +9,7 @@ function Resume() {
       </p>
       <div class="columns">
 
-        <div class="column is-three-fifths has-background-success-light">
+        <div class="column is-three-fifths">
         <div class="columns">
           <div class="column is-half">
             <h5 class="title is-5">Front End</h5>
@@ -36,8 +36,8 @@ function Resume() {
         <div class="column">
           <div class="tile is-ancestor">
             <div class="tile is-parent">
-              <div class="tile is-child box notification is-light has-background-success-light">
-                <h4 class="title is-4">Download my latest resume:</h4>
+              <div class="tile is-child box notification is-light has-background-white-ter">
+                <h4 class="title is-4 has-text-grey-dark">Download my latest resume:</h4>
                 <div class="buttons is-centered">
                   <a
                     href={resume}
