@@ -7,7 +7,6 @@ import Resume from "./content/Resume";
 import Contact from "./content/Contact";
 
 function Main() {
-  const message = "Test";
   const [selectedContent, setSelectedContent] = useState("About");
 
   const renderContent = () => {
@@ -29,17 +28,22 @@ function Main() {
 
   return (
     <div className="container">
+      <body class="has-navbar-fixed-top">
       <Navbar
         selectedContent={selectedContent}
         changeContent={changeContent}
       />
     <div class="columns">
-<div class="column"></div>
+
+
+<div class="column">
       {renderContent()}
-      <Footer />
-      <p>{message}</p>
-      <div class="column"></div>
+
       </div>
+
+      </div>
+      <Footer />
+      </body>
     </div>
   );
 }
