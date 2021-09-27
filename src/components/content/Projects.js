@@ -9,10 +9,6 @@ import codequiz from '../../assets/images/code-quiz.PNG';
 import dayplanner from '../../assets/images/day-planner.PNG';
 import teamprofile from '../../assets/images/team-profile.PNG';
 
-
-
-
-
 function Project() {
 
   return (
@@ -41,14 +37,18 @@ function Project() {
             <div class="buttons is-centered">
               <a
                 href="Github Pages"
-                onClick={() => window.open("https://jcorozco81.github.io/trivia-night")}
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.open("https://jcorozco81.github.io/trivia-night");}}
                 class="button is-large is-info"
               >
                 Deployed Website
               </a>
               <a
               href="Github Repository"
-              onClick={() => window.open("https://github.com/jcorozco81/trivia-night")}
+              onClick={(e) => {
+                e.preventDefault();
+                window.open("https://github.com/jcorozco81/trivia-night");}}
                 class="button is-large is-info"
               >
                 Github Repository
@@ -75,14 +75,18 @@ function Project() {
             <div class="buttons is-centered">
               <a
                 href="Github Pages"
-                onClick={() => window.open("https://jcorozco81.github.io/weather-dashboard")}
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.open("https://jcorozco81.github.io/weather-dashboard");}}
                 class="button is-info"
               >
                 Deployed Website
               </a>
               <a
                 href="Github Repository"
-                onClick={() => window.open("https://github.com/jcorozco81/weather-dashboard")}
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.open("https://github.com/jcorozco81/weather-dashboard");}}
                 class="button is-info"
               >
                 Github Repository
@@ -107,14 +111,18 @@ function Project() {
             <div class="buttons is-centered">
               <a
                 href="Github Pages"
-                onClick={() => window.open("https://jcorozco81.github.io/code-quiz/")}
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.open("https://jcorozco81.github.io/code-quiz/");}}
                 class="button is-info"
               >
                 Deployed Website
               </a>
               <a
                 href="Github Repository"
-                onClick={() => window.open("https://github.com/jcorozco81/code-quiz")}
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.open("https://github.com/jcorozco81/code-quiz");}}
                 class="button is-info"
               >
                 Github Repository
@@ -143,14 +151,18 @@ function Project() {
             <div class="buttons is-centered">
               <a
                 href="Heroku Deployment"
-                onClick={() => window.open("https://vast-hamlet-52484.herokuapp.com/")}
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.open("https://vast-hamlet-52484.herokuapp.com/");}}
                 class="button is-large is-info"
               >
                 Deployed Website
               </a>
               <a
                 href="Github Repository"
-                onClick={() => window.open("https://github.com/jcorozco81/AI-Pointment")}
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.open("https://github.com/jcorozco81/AI-Pointment");}}
                 class="button is-large is-info "
               >
                 Github Repository
@@ -175,14 +187,18 @@ function Project() {
             <div class="buttons is-centered">
               <a
                 href="Heroku Deployment"
-                onClick={() => window.open("https://jco-note-taker.herokuapp.com/")}
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.open("https://jco-note-taker.herokuapp.com/");}}
                 class="button is-info"
               >
                 Deployed Website
               </a>
               <a
                 href="Github Repository"
-                onClick={() => window.open("https://github.com/jcorozco81/note-taker")}
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.open("https://github.com/jcorozco81/note-taker");}}
                 class="button is-info"
               >
                 Github Repository
@@ -207,14 +223,18 @@ function Project() {
             <div class="buttons is-centered">
               <a
                 href="Google Drive"
-                onClick={() => window.open("https://drive.google.com/drive/folders/11x_L55BLAIqM_6dOeltPIBbfVCq85bug?usp=sharing")}
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.open("https://drive.google.com/drive/folders/11x_L55BLAIqM_6dOeltPIBbfVCq85bug?usp=sharing");}}
                 class="button is-info"
               >
                 Demo Videos
               </a>
               <a
                 href="Github Repository"
-                onClick={() => window.open("https://github.com/jcorozco81/profile-generator")}
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.open("https://github.com/jcorozco81/profile-generator");}}
                 class="button is-info"
               >
                 Github Repository
@@ -245,14 +265,18 @@ function Project() {
             <div class="buttons is-centered">
               <a
                 href="Github Pages"
-                onClick={() => window.open("https://jcorozco81.github.io/day-scheduler/")}
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.open("https://jcorozco81.github.io/day-scheduler/");}}
                 class="button is-info"
               >
                 Deployed Website
               </a>
               <a
                 href="Github Repository"
-                onClick={() => window.open("https://github.com/jcorozco81/day-scheduler")}
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.open("https://github.com/jcorozco81/day-scheduler");}}
                 class="button is-info"
               >
                 Github Repository
@@ -277,14 +301,18 @@ function Project() {
             <div class="buttons is-centered">
               <a
                 href="Google Drive"
-                onClick={() => window.open("https://drive.google.com/drive/folders/1dtQot8GOPrvie7qggSCOe3-hIDd3X9EQ?usp=sharing")}
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.open("https://drive.google.com/drive/folders/1dtQot8GOPrvie7qggSCOe3-hIDd3X9EQ?usp=sharing");}}
                 class="button is-info"
               >
                 Demo Videos
               </a>
               <a
                 href="Github Repository"
-                onClick={() => window.open("https://github.com/jcorozco81/employee-tracker")}
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.open("https://github.com/jcorozco81/employee-tracker");}}
                 class="button is-info"
               >
                 Github Repository
@@ -309,14 +337,18 @@ function Project() {
             <div class="buttons is-centered">
               <a
                 href="Google Drive"
-                onClick={() => window.open("https://drive.google.com/drive/folders/1UIdp2heSz_x1nhrXCnXC2uofU04JAywf?usp=sharing")}
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.open("https://drive.google.com/drive/folders/1UIdp2heSz_x1nhrXCnXC2uofU04JAywf?usp=sharing");}}
                 class="button is-info"
               >
                 Demo Videos
               </a>
               <a
                 href="Github Repository"
-                onClick={() => window.open("https://github.com/jcorozco81/readme-generator")}
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.open("https://github.com/jcorozco81/readme-generator");}}
                 class="button is-info"
               >
                 Github Repository
