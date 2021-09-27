@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/react-portfolio/static/css/main.8c8b27cf.chunk.css",
-    "main.js": "/react-portfolio/static/js/main.37f1a08a.chunk.js",
-    "main.js.map": "/react-portfolio/static/js/main.37f1a08a.chunk.js.map",
+    "main.js": "/react-portfolio/static/js/main.4cad3cae.chunk.js",
+    "main.js.map": "/react-portfolio/static/js/main.4cad3cae.chunk.js.map",
     "runtime-main.js": "/react-portfolio/static/js/runtime-main.81e1db7b.js",
     "runtime-main.js.map": "/react-portfolio/static/js/runtime-main.81e1db7b.js.map",
     "static/css/2.caa6aeef.chunk.css": "/react-portfolio/static/css/2.caa6aeef.chunk.css",
@@ -27,6 +27,7 @@
     "static/media/readme.c1d17ac8.PNG": "/react-portfolio/static/media/readme.c1d17ac8.PNG",
     "static/media/team-profile.984ca014.PNG": "/react-portfolio/static/media/team-profile.984ca014.PNG",
     "static/media/trivia-night.2c66d698.PNG": "/react-portfolio/static/media/trivia-night.2c66d698.PNG",
+    "static/media/twitter.5ae9f4cf.svg": "/react-portfolio/static/media/twitter.5ae9f4cf.svg",
     "static/media/weather-dashboard.37172ff4.PNG": "/react-portfolio/static/media/weather-dashboard.37172ff4.PNG"
   },
   "entrypoints": [
@@ -34,6 +35,6 @@
     "static/css/2.caa6aeef.chunk.css",
     "static/js/2.954fe4b1.chunk.js",
     "static/css/main.8c8b27cf.chunk.css",
-    "static/js/main.37f1a08a.chunk.js"
+    "static/js/main.4cad3cae.chunk.js"
   ]
 }
