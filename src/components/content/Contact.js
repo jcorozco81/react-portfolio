@@ -20,6 +20,7 @@ function Contact() {
 
     if (inputID === "input-email") {
       setEmail(inputValue);
+
     } else if (inputID === "input-name") {
       setfullname(inputValue);
     } else {
@@ -27,35 +28,68 @@ function Contact() {
     }
   };
 
+  const handleBlur = (e) => {
+    const { target } = e;
+    const inputID = target.id;
+
+    if (inputID === "input-email") {
+    seterrorEmail(email ? (checkEmail(email) ? "" : invalidEmailMessage) : emptyFields);
+    
+    } else if (inputID === "input-name") {
+    seterrorName(fullname ? "" : emptyFields);
+  } else {
+    setErrorMessage(message ? "" : emptyFields);
+  }
+  };
+
+  const handleFocus = (e) => {
+    const { target } = e;
+    const inputID = target.id;
+
+    if (inputID === "input-email") {
+    seterrorEmail("");
+    
+    } else if (inputID === "input-name") {
+    seterrorName("");
+  } else {
+    setErrorMessage("");
+  }
+  };
+
   const submitForm = (event) => {
     event.preventDefault();
 
     if (!fullname || !checkEmail(email) || !message) {
-      if (!fullname) {
-        seterrorName(emptyFields);
-      } else {
-        seterrorName("");
-      }
-      if (!checkEmail(email)) {
-        seterrorEmail(invalidEmailMessage);
-      } else {
-        seterrorEmail("");
-      }
-      if (!message) {
-        setErrorMessage(emptyFields);
-      } else {
-        setErrorMessage("");
-      }
+      // if (!fullname) {
+      //   seterrorName(emptyFields);
+      // } else {
+      //   seterrorName("");
+      // }
+      // if (!checkEmail(email)) {
+      //   seterrorEmail(invalidEmailMessage);
+      // } else {
+      //   seterrorEmail("");
+      // }
+      // if (!message) {
+      //   setErrorMessage(emptyFields);
+      // } else {
+      //   setErrorMessage("");
+      // }
+      alert(
+        `Error: Message not sent. Verify fields.`
+      );
     } else {
       alert(
-        `Hello ${fullname}! You Email is ${email} and you message: ${message}`
+        `Hello ${fullname}! Your message have been sent.`
+
+        // `Hello ${fullname}! You Email is ${email} and you message: ${message}`
       );
       setfullname("");
       setEmail("");
       setmessage("");
       seterrorName("");
       seterrorEmail("");
-      setErrorMessage("")
+      setErrorMessage("");
     }
   };
 
@@ -79,6 +113,8 @@ function Contact() {
                   id="input-name"
                   value={fullname}
                   onChange={handleChange}
+                  onBlur={handleBlur}
+                  onFocus={handleFocus}
                 />
               </div>
 
@@ -93,6 +129,8 @@ function Contact() {
                   id="input-email"
                   value={email}
                   onChange={handleChange}
+                  onBlur={handleBlur}
+                  onFocus={handleFocus}
                 />
               </div>
               <div class="row m-3">
@@ -106,6 +144,8 @@ function Contact() {
                   id="input-message"
                   value={message}
                   onChange={handleChange}
+                  onBlur={handleBlur}
+                  onFocus={handleFocus}
                 />
               </div>
               <div class="row m-3">
