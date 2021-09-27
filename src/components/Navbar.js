@@ -1,15 +1,68 @@
 import React from "react";
 
-// React components are isolated parts of an application that help organize and isolate different parts of the program into smaller chunks
-// We can pass data to these components and even render other components inside other components.
-// The `Hello` component is a child of our `App` component and is responsible for rendering the "Hello World" header.
 function Navbar({changeContent, selectedContent}) {
-  // const message = 'Hello world! I am a React Component';
 
   return (
+    
     <div className="container">
-      {/* <h2>{message}</h2> */}
-      <ul class="nav">
+      <div class="column mb-5">
+  <nav class="navbar is-fixed-top notification" role="navigation"
+    aria-label="main navigation">
+    {/* <div class="navbar-brand notification is-primary has-background-primary-dark">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="nav-menu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div> */}
+    <div id="nav-menu" class="navbar-menu">
+      <div class="navbar-end buttons mr-2">
+
+        <a class="button is-medium is-ghost mx-4"  href="#About"
+            onClick={() => changeContent('About')}
+            className={selectedContent === 'About' ? 'button is-warning is-light is-medium mx-4' : 'button is-medium is-ghost mx-4'}
+          >
+            About Me
+          </a>
+
+        <a class="button is-medium is-ghost mx-4" href="#Projects"
+            onClick={() => changeContent('Projects')}
+            className={selectedContent === 'Projects' ? 'button is-warning is-light is-medium mx-4' : 'button is-medium is-ghost mx-4'}
+          >
+            Projects
+          </a>
+
+        <a class="button is-medium is-ghost mx-4"  href="#Resume"
+            onClick={() => changeContent('Resume')}
+            className={selectedContent === 'Resume' ? 'button is-warning is-light is-medium mx-4' : 'button is-medium is-ghost mx-4'}
+          >
+            Resume
+          </a>
+
+          <a class="button is-medium is-ghost mx-4"  href="#Contact"
+            onClick={() => changeContent('Contact')}
+            className={selectedContent === 'Contact' ? 'button is-warning is-light is-medium mx-4' : 'button is-medium is-ghost mx-4'}
+          >
+            Contact
+          </a>
+      </div>
+    </div>
+
+  </nav>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+      {/* <ul class="nav">
         <li class="nav-item">
           <a
             class="nav-link"
@@ -51,7 +104,7 @@ function Navbar({changeContent, selectedContent}) {
             Contact
           </a>
         </li>
-      </ul>
+      </ul> */}
     </div>
   );
 }
