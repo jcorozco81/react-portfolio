@@ -2,55 +2,76 @@ import React from "react";
 import svgEmail from "../assets/svg/email.svg";
 import svgLinkedIn from "../assets/svg/linkedin.svg";
 import svgGit from "../assets/svg/github.svg";
+import svgTwitter from "../assets/svg/twitter.svg";
 
 function Footer() {
   // const message = 'Hello world! I am a React Component';
 
   return (
     <div className="container">
-        <div class="column has-text-centered">
+      <nav class="navbar">
+        <div class="column has-text-centered ">
           <div class="column">
             <div class="tile is-ancestor has-text-centered">
               <div class="tile is-parent">
                 <article class="tile is-child">
-                  <img alt="Juan Orozco" src={svgGit}></img>
                   <a
                     class="nav-link active"
                     aria-current="page"
                     href="github"
-                    onClick={() => window.open("https://github.com/jcorozco81")}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      window.open("https://github.com/jcorozco81");
+                    }}
                   >
-                    GitHub
+                    <img alt="GitHub" src={svgGit}></img>
                   </a>
                 </article>
               </div>
 
               <div class="tile is-parent">
                 <article class="tile is-child">
-                  <img alt="Juan Orozco" src={svgLinkedIn}></img>
                   <a
                     class="nav-link"
                     href="linkedin"
-                    onClick={() =>
+                    onClick={(e) => {
+                      e.preventDefault();
                       window.open(
                         "https://www.linkedin.com/in/juan-carlos-orozco-b6276434/"
-                      )
-                    }
+                      );
+                    }}
                   >
-                    LinkedIn
+                    <img alt="LinkeIn" src={svgLinkedIn}></img>
                   </a>
                 </article>
               </div>
 
               <div class="tile is-parent">
                 <article class="tile is-child">
-                  <img alt="Juan Orozco" src={svgEmail}></img>
+                  <a
+                    class="nav-link"
+                    href="Twitter"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      window.open("https://twitter.com/jcorozcoleon");
+                    }}
+                  >
+                    <img alt="Twitter" src={svgTwitter}></img>
+                  </a>
+                </article>
+              </div>
+
+              <div class="tile is-parent">
+                <article class="tile is-child">
                   <a
                     class="nav-link"
                     href="Email"
-                    onClick={() => window.open("mailto:jcorozco@gmail.com")}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      window.open("mailto:jcorozco@gmail.com");
+                    }}
                   >
-                    Email
+                    <img alt="Email" src={svgEmail}></img>
                   </a>
                 </article>
               </div>
@@ -60,30 +81,7 @@ function Footer() {
             <p>© 2021 Created by Juan Orozco</p>
           </div>
         </div>
-
-
-
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      </nav>
     </div>
   );
 }
