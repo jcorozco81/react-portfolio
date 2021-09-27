@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/react-portfolio/static/css/main.8c8b27cf.chunk.css",
+    "main.js": "/react-portfolio/static/js/main.37f1a08a.chunk.js",
+    "main.js.map": "/react-portfolio/static/js/main.37f1a08a.chunk.js.map",
+    "runtime-main.js": "/react-portfolio/static/js/runtime-main.81e1db7b.js",
+    "runtime-main.js.map": "/react-portfolio/static/js/runtime-main.81e1db7b.js.map",
+    "static/css/2.caa6aeef.chunk.css": "/react-portfolio/static/css/2.caa6aeef.chunk.css",
+    "static/js/2.954fe4b1.chunk.js": "/react-portfolio/static/js/2.954fe4b1.chunk.js",
+    "static/js/2.954fe4b1.chunk.js.map": "/react-portfolio/static/js/2.954fe4b1.chunk.js.map",
+    "static/js/3.3ce180e5.chunk.js": "/react-portfolio/static/js/3.3ce180e5.chunk.js",
+    "static/js/3.3ce180e5.chunk.js.map": "/react-portfolio/static/js/3.3ce180e5.chunk.js.map",
+    "index.html": "/react-portfolio/index.html",
+    "static/css/2.caa6aeef.chunk.css.map": "/react-portfolio/static/css/2.caa6aeef.chunk.css.map",
+    "static/css/main.8c8b27cf.chunk.css.map": "/react-portfolio/static/css/main.8c8b27cf.chunk.css.map",
+    "static/js/2.954fe4b1.chunk.js.LICENSE.txt": "/react-portfolio/static/js/2.954fe4b1.chunk.js.LICENSE.txt",
+    "static/media/AI-Pointment.fc7f6008.PNG": "/react-portfolio/static/media/AI-Pointment.fc7f6008.PNG",
+    "static/media/Resume_Juan_Orozco-June-2021.0d4bf9bc.pdf": "/react-portfolio/static/media/Resume_Juan_Orozco-June-2021.0d4bf9bc.pdf",
+    "static/media/code-quiz.31385fe3.PNG": "/react-portfolio/static/media/code-quiz.31385fe3.PNG",
+    "static/media/day-planner.e8af5ff5.PNG": "/react-portfolio/static/media/day-planner.e8af5ff5.PNG",
+    "static/media/email.56058da1.svg": "/react-portfolio/static/media/email.56058da1.svg",
+    "static/media/employee.c80f3a5f.PNG": "/react-portfolio/static/media/employee.c80f3a5f.PNG",
+    "static/media/github.04be58c1.svg": "/react-portfolio/static/media/github.04be58c1.svg",
+    "static/media/linkedin.27a3f479.svg": "/react-portfolio/static/media/linkedin.27a3f479.svg",
+    "static/media/note-taker.5b0a02d1.PNG": "/react-portfolio/static/media/note-taker.5b0a02d1.PNG",
+    "static/media/profile-pic.e901d58b.jpg": "/react-portfolio/static/media/profile-pic.e901d58b.jpg",
+    "static/media/readme.c1d17ac8.PNG": "/react-portfolio/static/media/readme.c1d17ac8.PNG",
+    "static/media/team-profile.984ca014.PNG": "/react-portfolio/static/media/team-profile.984ca014.PNG",
+    "static/media/trivia-night.2c66d698.PNG": "/react-portfolio/static/media/trivia-night.2c66d698.PNG",
+    "static/media/weather-dashboard.37172ff4.PNG": "/react-portfolio/static/media/weather-dashboard.37172ff4.PNG"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.81e1db7b.js",
+    "static/css/2.caa6aeef.chunk.css",
+    "static/js/2.954fe4b1.chunk.js",
+    "static/css/main.8c8b27cf.chunk.css",
+    "static/js/main.37f1a08a.chunk.js"
+  ]
+}
