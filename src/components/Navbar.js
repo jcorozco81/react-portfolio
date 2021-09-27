@@ -5,16 +5,13 @@ function Navbar({changeContent, selectedContent}) {
   return (
     
     <div className="container">
-      <div class="column mb-5">
-  <nav class="navbar is-fixed-top notification" role="navigation"
+      <div class="column mb-6 ">
+  <nav class="navbar is-fixed-top notification has-background-info-light" role="navigation"
     aria-label="main navigation">
-    {/* <div class="navbar-brand notification is-primary has-background-primary-dark">
-      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="nav-menu">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
-    </div> */}
+      <div class="navbar-brand">
+      <h3 class="title is-3 has-text-info-dark">My Portfolio: Juan Orozco</h3>
+      </div>
+
     <div id="nav-menu" class="navbar-menu">
       <div class="navbar-end buttons mr-2">
 
