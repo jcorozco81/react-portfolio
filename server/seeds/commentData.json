@@ -1,0 +1,12 @@
+[
+    {
+      "name": "JavaScript",
+      "email": "JavaScript@email.com",
+      "body": "This is a test message"
+    },
+    {
+        "name": "Java",
+        "email": "Java@email.com",
+        "body": "This is another test message"
+      }
+  ]
