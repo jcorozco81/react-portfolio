@@ -1,6 +1,9 @@
 {
   "name": "my-react-portfolio",
   "version": "0.1.0",
+  "engines": {
+    "node": "6.11.1"
+  },
   "private": true,
   "proxy": "http://localhost:4001",
   "homepage": "https://jcorozco81.github.io/react-portfolio/",
