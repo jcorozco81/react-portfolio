@@ -8,8 +8,10 @@ const resolvers = {
   },
 
     Mutation: {
-      addMessage: async (parent, { name, email, body }) => {
-        return await Message.create({ name, email, body });
+      addMessage: async (parent, { fullname, email, body }) => {
+        const message = await Message.create({ fullname, email, body });
+        console.log(message);
+        return message;
       },
     },
   

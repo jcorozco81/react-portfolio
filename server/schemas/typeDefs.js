@@ -3,7 +3,7 @@ const { gql } = require('apollo-server-express');
 const typeDefs = gql`
 type Message {
     _id: ID!
-    name: String
+    fullname: String
     email: String
     body: String
 }
@@ -13,7 +13,7 @@ type Query {
   }
 
   type Mutation {
-    addMessage(name: String, email: String, body: String ): Message
+    addMessage(fullname: String, email: String, body: String ): Message
 
   }
 

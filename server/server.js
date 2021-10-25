@@ -17,7 +17,7 @@ async function startApolloServer(typeDefs, resolvers) {
   await server.start();
   server.applyMiddleware({ app });
 
-  app.use(express.urlencoded({ extended: true }));
+  app.use(express.urlencoded({ extended: true })); //check
   app.use(express.json());
 
   // if we're in production, serve client/build as static assets
