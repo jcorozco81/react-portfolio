@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import { checkEmail } from "../../utils/helper";
-
+// Mutations
 import { useMutation } from "@apollo/client";
 import { ADD_MESSAGE } from "../../utils/mutations";
 
@@ -98,9 +98,9 @@ function Contact() {
       alert(`Error: Message not sent. Verify fields.`);
     } else {
       try {
-        console.log({formData});
+        // console.log({formData});
         const { data } = await createMessage({ variables: { ...formData } });
-        console.log(data);
+        // console.log(data);
       } catch (err) {
         console.error(err);
       }
