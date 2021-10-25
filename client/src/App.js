@@ -1,14 +1,23 @@
 // import logo from './logo.svg';
 import "./App.css";
 import Main from "./components/Main";
+import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
+
+const client = new ApolloClient({
+  uri: '/graphql',
+  cache: new InMemoryCache(),
+});
 
 function App() {
   return (
+    <ApolloProvider client={client}>
     <div>
 
       <Main />
 
     </div>
+    </ApolloProvider>
+
   );
 }
 

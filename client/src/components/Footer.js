@@ -9,14 +9,14 @@ function Footer() {
 
   return (
     <div className="container">
-      <nav class="navbar">
-        <div class="column has-text-centered ">
-          <div class="column">
-            <div class="tile is-ancestor has-text-centered">
-              <div class="tile is-parent">
-                <article class="tile is-child">
+      <nav className="navbar">
+        <div className="column has-text-centered ">
+          <div className="column">
+            <div className="tile is-ancestor has-text-centered">
+              <div className="tile is-parent">
+                <article className="tile is-child">
                   <a
-                    class="nav-link active"
+                    className="nav-link active"
                     aria-current="page"
                     href="github"
                     onClick={(e) => {
@@ -29,10 +29,10 @@ function Footer() {
                 </article>
               </div>
 
-              <div class="tile is-parent">
-                <article class="tile is-child">
+              <div className="tile is-parent">
+                <article className="tile is-child">
                   <a
-                    class="nav-link"
+                    className="nav-link"
                     href="linkedin"
                     onClick={(e) => {
                       e.preventDefault();
@@ -46,10 +46,10 @@ function Footer() {
                 </article>
               </div>
 
-              <div class="tile is-parent">
-                <article class="tile is-child">
+              <div className="tile is-parent">
+                <article className="tile is-child">
                   <a
-                    class="nav-link"
+                    className="nav-link"
                     href="Twitter"
                     onClick={(e) => {
                       e.preventDefault();
@@ -61,10 +61,10 @@ function Footer() {
                 </article>
               </div>
 
-              <div class="tile is-parent">
-                <article class="tile is-child">
+              <div className="tile is-parent">
+                <article className="tile is-child">
                   <a
-                    class="nav-link"
+                    className="nav-link"
                     href="Email"
                     onClick={(e) => {
                       e.preventDefault();
@@ -77,7 +77,7 @@ function Footer() {
               </div>
             </div>
           </div>
-          <div class="column">
+          <div className="column">
             <p>© 2021 Created by Juan Orozco</p>
           </div>
         </div>

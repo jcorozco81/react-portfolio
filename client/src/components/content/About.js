@@ -11,7 +11,7 @@ function About() {
   return (
 
 
-    <div class="container">
+    <div className="container">
 
 
 
@@ -19,21 +19,21 @@ function About() {
 
 
 
-      <div class="tile is-ancestor">
-        <div class="tile is-parent is-4">
-          <div class="tile is-child box notification is-light">
-            <div class="block">
-              <figure class="image">
+      <div className="tile is-ancestor">
+        <div className="tile is-parent is-4">
+          <div className="tile is-child box notification is-light">
+            <div className="block">
+              <figure className="image">
                 <img alt="Juan Orozco" src={ProfilePic}></img>
               </figure>
             </div>
           </div>
         </div>
 
-        <div class="tile is-parent">
-          <div class="tile is-child box notification">
-          <p class="title" id="about-me">About Me:</p>
-            <p class="is-size-5-desktop is-size-7-mobile is-size-6-tablet">{message}</p>
+        <div className="tile is-parent">
+          <div className="tile is-child box notification">
+          <p className="title" id="about-me">About Me:</p>
+            <p className="is-size-5-desktop is-size-7-mobile is-size-6-tablet">{message}</p>
           </div>
         </div>
       </div>

@@ -28,22 +28,31 @@ function Main() {
 
   return (
     <div className="container">
-      <body class="has-navbar-fixed-top">
+
+<div className="columns mb-6">
+
+
+<div className="column mb-6">
+
       <Navbar
         selectedContent={selectedContent}
         changeContent={changeContent}
       />
-    <div class="columns">
+     </div>
+
+</div>
+
+    <div className="columns">
 
 
-<div class="column">
+<div className="column">
       {renderContent()}
 
       </div>
 
       </div>
       <Footer />
-      </body>
+
     </div>
   );
 }
