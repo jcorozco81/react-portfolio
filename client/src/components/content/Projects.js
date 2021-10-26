@@ -1,5 +1,5 @@
 import React from "react";
-import trivia from '../../assets/images/trivia-night.png';
+import trivia from '../../assets/images/trivia-night.PNG';
 import aipointment from '../../assets/images/AI-Pointment.png';
 import weather from '../../assets/images/weather-dashboard.png';
 import readmegen from '../../assets/images/readme.png';
