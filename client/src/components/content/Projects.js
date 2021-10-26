@@ -1,13 +1,13 @@
 import React from "react";
 import trivia from '../../assets/images/trivia-night.PNG';
-import aipointment from '../../assets/images/AI-Pointment.png';
-import weather from '../../assets/images/weather-dashboard.png';
-import readmegen from '../../assets/images/readme.png';
-import employee from '../../assets/images/employee.png';
-import notetaker from '../../assets/images/note-taker.png';
-import codequiz from '../../assets/images/code-quiz.png';
+import aipointment from '../../assets/images/AI-Pointment.PNG';
+import weather from '../../assets/images/weather-dashboard.PNG';
+import readmegen from '../../assets/images/readme.PNG';
+import employee from '../../assets/images/employee.PNG';
+import notetaker from '../../assets/images/note-taker.PNG';
+import codequiz from '../../assets/images/code-quiz.PNG';
 import dayplanner from '../../assets/images/day-planner.png';
-import teamprofile from '../../assets/images/team-profile.png';
+import teamprofile from '../../assets/images/team-profile.PNG';
 
 function Project() {
 
