@@ -2,6 +2,9 @@ const express = require("express");
 const { ApolloServer } = require("apollo-server-express");
 const path = require("path");
 const db = require("./config/connection");
+require('dotenv').config();
+// const emailRoute = require("./routes/email");
+
 const { typeDefs, resolvers } = require("./schemas");
 const http = require("http");
 
@@ -28,6 +31,9 @@ if (process.env.NODE_ENV === 'production') {
   app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '../client/build/index.html'));
   });
+
+  const routes = require('./routes/emailRoute');
+  app.use(routes);
 
   
   await new Promise((resolve) => httpServer.listen(PORT, resolve));

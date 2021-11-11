@@ -17,6 +17,10 @@ body:{
     required: true,
     trim: true,
 },
+date: {
+    type: Date,
+    default: Date.now
+  }
 
 });
 
