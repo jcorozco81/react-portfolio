@@ -1,0 +1,67 @@
+.nav-image {
+  width: 100%;
+  height: 100%;
+
+}
+
+.header-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  height: auto;
+}
+
+
+/* Tablets */
+
+@media screen and (max-width: 1024px) {
+  .header-img {
+    width: 45%;
+    height: auto;
+  }
+a{
+  font-size: smaller;
+}
+
+
+  /* Large smartphones */
+
+  @media screen and (max-width: 768px) {
+
+    .nav-image {
+        width: 600px;
+        height: auto;
+      }
+
+  }
+
+  /* Small smartphones */
+
+  @media screen and (max-width: 576px) {
+
+
+    .nav-image {
+        width: 100%;
+        height: auto;
+      }
+
+  }
+
+  @media screen and (max-width: 280px) {
+
+    .nav-image {
+      width: 100%;
+      height: auto;
+      }
+
+      .button{
+        font-size: small;
+        color: red;
+      }
+  
+
+}
+
+
+}
