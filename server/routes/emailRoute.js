@@ -10,7 +10,9 @@ router.post('/contact', async (req, res) => {
 // console.log(req.body);
 
         let transporter = nodemailer.createTransport({
-            host: "smtp.mail.wowway.com", //"smtp.mail.wowway.com",
+            // host: "smtp.mail.wowway.com", //"smtp.mail.wowway.com",
+            host: "smtpauh.mail.wowway.com/",
+
             port: 587,
             secure: false, // true for 465, false for other ports
             auth: {
