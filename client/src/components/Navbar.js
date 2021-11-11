@@ -1,63 +1,105 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import NameHeader from "../../src/assets/images/name-header.png";
+import "../assets/css/style.css";
 
-function Navbar({changeContent, selectedContent}) {
-
+function Navbar({ changeContent, selectedContent }) {
   return (
-    
     <div className="container">
       <div className="column">
-  <nav className="navbar is-fixed-top notification has-background-info-light" role="navigation"
-    aria-label="main navigation">
-      <div className="navbar-brand">
-      <h3 className="title is-3 has-text-info-dark">My Portfolio: Juan Orozco</h3>
+        <nav
+          className="navbar is-fixed-top notification"
+          role="navigation"
+          aria-label="main navigation"
+        >
+          <div class="navbar-brand">
+            <figure className="nav-image">
+              <img
+                alt="Juan Orozco"
+                src={NameHeader}
+                className="header-img"
+              ></img>{" "}
+            </figure>
+          </div>
+
+
+          <div class="navbar-end">
+
+          <div class="tile is-ancestor">
+            <div class="tile is-parent">
+              <article class="tile is-child has-text-centered">
+                <Link
+                  to="/"
+                  onClick={() => changeContent("About")}
+                  className={
+                    selectedContent === "About"
+                      ? "button is-outline is-ghost is-medium mx-4"
+                      : "button is-medium is-ghost mx-4"
+                  }
+                >
+                  About Me
+                </Link>
+              </article>
+            </div>
+
+            <div class="tile is-parent">
+              <article class="tile is-child has-text-centered">
+                <Link
+                  to="/Projects"
+                  onClick={() => changeContent("Projects")}
+                  className={
+                    selectedContent === "Projects"
+                      ? "button is-outline is-ghost is-medium mx-4"
+                      : "button is-medium is-ghost mx-4"
+                  }
+                >
+                  Projects
+                </Link>
+              </article>
+            </div>
+
+            <div class="tile is-parent">
+              <article class="tile is-child has-text-centered">
+                <Link
+                  to="/Resume"
+                  onClick={() => changeContent("Resume")}
+                  className={
+                    selectedContent === "Resume"
+                      ? "button is-outline is-ghost is-medium mx-4"
+                      : "button is-medium is-ghost mx-4"
+                  }
+                >
+                  Resume
+                </Link>
+              </article>
+            </div>
+
+            <div class="tile is-parent">
+              <article class="tile is-child has-text-centered">
+                <Link
+                  to="/Contact"
+                  onClick={() => changeContent("Contact")}
+                  className={
+                    selectedContent === "Contact"
+                      ? "button is-outline is-ghost is-medium mx-4"
+                      : "button is-medium is-ghost mx-4"
+                  }
+                >
+                  Contact
+                </Link>
+              </article>
+            </div>
+          </div>
+          </div>
+
+          {/* <div className="navbar-brand"> */}
+
+          {/* <p className="title is-3 has-text-info-dark">Juan Carlos Orozco León</p>
+      <p className="subtitle is-5 has-text-info-dark">Full Stack Web Developer</p> */}
+          {/* </div> */}
+          {/* </div> */}
+        </nav>
       </div>
-
-    <div id="nav-menu" className="navbar-menu">
-      <div className="navbar-end buttons mr-2">
-
-        <a className="button is-medium is-ghost mx-4"  href="#About"
-            onClick={() => changeContent('About')}
-            className={selectedContent === 'About' ? 'button is-warning is-light is-medium mx-4' : 'button is-medium is-ghost mx-4'}
-          >
-            About Me
-          </a>
-
-        <a className="button is-medium is-ghost mx-4" href="#Projects"
-            onClick={() => changeContent('Projects')}
-            className={selectedContent === 'Projects' ? 'button is-warning is-light is-medium mx-4' : 'button is-medium is-ghost mx-4'}
-          >
-            Projects
-          </a>
-
-        <a className="button is-medium is-ghost mx-4"  href="#Resume"
-            onClick={() => changeContent('Resume')}
-            className={selectedContent === 'Resume' ? 'button is-warning is-light is-medium mx-4' : 'button is-medium is-ghost mx-4'}
-          >
-            Resume
-          </a>
-
-          <a className="button is-medium is-ghost mx-4"  href="#Contact"
-            onClick={() => changeContent('Contact')}
-            className={selectedContent === 'Contact' ? 'button is-warning is-light is-medium mx-4' : 'button is-medium is-ghost mx-4'}
-          >
-            Contact
-          </a>
-      </div>
-    </div>
-
-  </nav>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
 
       {/* <ul className="nav">
         <li className="nav-item">

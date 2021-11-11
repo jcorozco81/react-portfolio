@@ -1,5 +1,6 @@
 import React from "react";
-import resume from "../../assets/documents/Resume_Juan_Orozco-June-2021.pdf";
+import resume from "../../assets/documents/resume-jcol.pdf";
+import certificate from "../../assets/documents/fswd-coding-bootcamp-cert-jco.pdf";
 
 function Resume() {
   return (
@@ -29,6 +30,7 @@ function Resume() {
               <li>Handlebars</li>
               <li>mySQL</li>
               <li>MongoDB</li>
+              <li>graphQL</li>
             </ul>
           </div>
         </div>
@@ -37,10 +39,27 @@ function Resume() {
           <div className="tile is-ancestor">
             <div className="tile is-parent">
               <div className="tile is-child box notification is-light has-background-white-ter">
-                <h4 className="title is-4 has-text-grey-dark">Download my latest resume:</h4>
+                <h4 className="title is-4 has-text-grey-dark">Latest Resume:</h4>
                 <div className="buttons is-centered">
                   <a
                     href={resume}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="button is-info"
+                  >
+                    Download
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="tile is-ancestor">
+            <div className="tile is-parent">
+              <div className="tile is-child box notification is-light has-background-white-ter">
+                <h4 className="title is-4 has-text-grey-dark">Full Stack Web Developer Certificate:</h4>
+                <div className="buttons is-centered">
+                  <a
+                    href={certificate}
                     target="_blank"
                     rel="noreferrer"
                     className="button is-info"

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import { checkEmail } from "../../utils/helper";
+import { sendEmail } from "../../utils/email";
 // Mutations
 import { useMutation } from "@apollo/client";
 import { ADD_MESSAGE } from "../../utils/mutations";
@@ -30,9 +31,9 @@ function Contact() {
     const inputValue = target.value;
     
     setformData({ ...formData, [formID]: inputValue });
-    console.log(target);
-    console.log(inputValue);
-    console.log(formData);
+    // console.log(target);
+    // console.log(inputValue);
+    // console.log(formData);
 
     if (inputID === "input-email") {
       setEmail(inputValue);
@@ -100,6 +101,8 @@ function Contact() {
       try {
         // console.log({formData});
         const { data } = await createMessage({ variables: { ...formData } });
+        sendEmail(formData);
+        alert("Message Sent");
         // console.log(data);
       } catch (err) {
         console.error(err);
