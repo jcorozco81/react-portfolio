@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import Navbar from "./Navbar";
+// import Navbar from "./Navbar";
+import Navigation from "./Navigation";
 import Footer from "./Footer";
 import About from "./content/About";
 import Projects from "./content/Projects";
@@ -18,15 +19,16 @@ function Main() {
     <div className="container">
       <div className="columns mb-6">
         <div className="column mb-6">
-          <Navbar
+
+          <Navigation
           selectedContent={selectedContent}
           changeContent={changeContent}
           />
         </div>
       </div>
 
-      <div className="columns">
-        <div className="column">
+      <div className="columns" id="content-div">
+        <div className="column mt-6">
         <Route exact path="/">
         <About />
         </Route>

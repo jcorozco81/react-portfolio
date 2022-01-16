@@ -121,7 +121,7 @@ function Contact() {
 
   return (
     <div className="container">
-      <p className="title" id="Contact-me">
+      <p className="title section-title" id="Contact-me">
         Contact Me:
       </p>
       <div className="columns">

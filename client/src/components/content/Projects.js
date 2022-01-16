@@ -13,7 +13,7 @@ function Project() {
 
   return (
     <div className="container">
-      <p className="title" id="my-resume">
+      <p className="title section-title" id="my-resume">
         My Projects:
       </p>
 

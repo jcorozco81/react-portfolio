@@ -2,10 +2,8 @@ import React from "react";
 import svgEmail from "../assets/svg/email.svg";
 import svgLinkedIn from "../assets/svg/linkedin.svg";
 import svgGit from "../assets/svg/github.svg";
-import svgTwitter from "../assets/svg/twitter.svg";
 
 function Footer() {
-  // const message = 'Hello world! I am a React Component';
 
   return (
     <div className="container">
@@ -45,22 +43,6 @@ function Footer() {
                   </a>
                 </article>
               </div>
-
-              <div className="tile is-parent">
-                <article className="tile is-child">
-                  <a
-                    className="nav-link"
-                    href="Twitter"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      window.open("https://twitter.com/jcorozcoleon");
-                    }}
-                  >
-                    <img alt="Twitter" src={svgTwitter}></img>
-                  </a>
-                </article>
-              </div>
-
               <div className="tile is-parent">
                 <article className="tile is-child">
                   <a

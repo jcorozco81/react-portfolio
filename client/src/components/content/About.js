@@ -13,7 +13,9 @@ function About() {
 
     <div className="container">
 
-
+<p className="title section-title" id="about-me">
+        About Me:
+      </p>
 
 
 
@@ -32,7 +34,7 @@ function About() {
 
         <div className="tile is-parent">
           <div className="tile is-child box notification">
-          <p className="title" id="about-me">About Me:</p>
+          <p className="title section-title" id="my-bio">My Bio:</p>
             <p className="is-size-5-desktop is-size-7-mobile is-size-6-tablet">{message}</p>
           </div>
         </div>

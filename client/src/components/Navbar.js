@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import NameHeader from "../../src/assets/images/name-header.png";
 import "../assets/css/style.css";
 
 function Navbar({ changeContent, selectedContent }) {
@@ -11,15 +10,27 @@ function Navbar({ changeContent, selectedContent }) {
           className="navbar is-fixed-top notification"
           role="navigation"
           aria-label="main navigation"
+          id="nav-cont"
         >
-          <div class="navbar-brand">
-            <figure className="nav-image">
+
+
+
+
+
+          {/* <div className="navbar-brand"> */}
+          <div className="nav-title">
+            {/* <figure className="nav-image">
               <img
                 alt="Juan Orozco"
                 src={NameHeader}
                 className="header-img"
               ></img>{" "}
-            </figure>
+            </figure> */}
+
+<h2 className="title is-2 header-txt" id="name">Juan Carlos Orozco León</h2>
+<h4 class="subtitle is-4 header-txt" id="position">Full Stack Web Developer</h4>
+
+
           </div>
 
 

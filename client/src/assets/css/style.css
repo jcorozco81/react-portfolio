@@ -1,67 +1,117 @@
-.nav-image {
-  width: 100%;
-  height: 100%;
+/* .header-txt { */
+* {
+  font-family: "Coda";
+}
+
+.nav-title {
+  text-align: center;
+  margin: auto;
+  
+}
+.navbar{
+  width: 90%;
+  margin: auto;
+}
+
+
+/* 1280px */
+
+@media screen and (max-width: 1280px) {
+  #name {
+    font-size:xx-large;
+  }
+  #position  {
+    font-size: x-large;
+  }
+  .navbar{
+    margin: auto;
+  }
+  .section-title{
+    font-size: xx-large;
+  }
 
 }
 
-.header-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  height: auto;
-}
-
-
-/* Tablets */
+/* 1024px */
 
 @media screen and (max-width: 1024px) {
-  .header-img {
-    width: 45%;
-    height: auto;
+
+  #name {
+    font-size:xx-large;
   }
-a{
-  font-size: smaller;
+  #position  {
+    font-size: x-large;
+  }
+  .navbar{
+    margin: auto;
+  }
+  .section-title{
+    font-size: x-large;
+  }
+
 }
 
 
-  /* Large smartphones */
 
-  @media screen and (max-width: 768px) {
+/* Large smartphones */
 
-    .nav-image {
-        width: 600px;
-        height: auto;
-      }
-
+@media screen and (max-width: 768px) {
+  #name {
+    font-size:xx-large;
+  }
+  #position  {
+    font-size: x-large;
+  }
+  .navbar{
+    margin: auto;
+  }
+  .section-title{
+    font-size: x-large;
   }
 
-  /* Small smartphones */
-
-  @media screen and (max-width: 576px) {
-
-
-    .nav-image {
-        width: 100%;
-        height: auto;
-      }
-
+  #content-div{
+    margin-top: 100px;
   }
-
-  @media screen and (max-width: 280px) {
-
-    .nav-image {
-      width: 100%;
-      height: auto;
-      }
-
-      .button{
-        font-size: small;
-        color: red;
-      }
-  
-
 }
 
+/* Small smartphones */
+
+@media screen and (max-width: 480px) {
+  #name {
+    font-size:x-large;
+  }
+  #position  {
+    font-size: larger;
+  }
+  .navbar{
+    margin: auto;
+  }
+  .section-title{
+    font-size: larger;
+  }
+
+  #content-div{
+    margin-top: 100px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+
+  #name {
+    font-size:large;
+  }
+  #position  {
+    font-size: medium;
+  }
+  .navbar{
+    margin: auto;
+  }
+  .section-title{
+    font-size: medium;
+  }
+
+  #content-div{
+    margin-top: 100px;
+  }
 
 }

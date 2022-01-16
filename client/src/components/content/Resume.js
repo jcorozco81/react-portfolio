@@ -5,7 +5,7 @@ import certificate from "../../assets/documents/fswd-coding-bootcamp-cert-jco.pd
 function Resume() {
   return (
     <div className="container">
-      <p className="title" id="my-resume">
+      <p className="title section-title" id="my-resume">
         Skills and Resume:
       </p>
       <div className="columns">
