@@ -21,10 +21,10 @@ router.post('/contact', async (req, res) => {
           
 
           var mailGunOptions = {
-            from: '"Portfolio Message" <app234950225@heroku.com>',
+            from: '"Portfolio Message"<postmaster@sandbox18733c83e98e444ab4d5be9986a7cc79.mailgun.org>',
             to: 'jcorozco@gmail.com',
             cc: '',
-            subject: 'Portfolio: Contact-me new message:',
+            subject: 'Portfolio - Contact-me new message:',
             text: `From: ${req.body.fullname}<${req.body.email}> Message Body: ${req.body.body}.`,
             html: `
             <h2>New message from:</h2>
