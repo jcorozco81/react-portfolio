@@ -7,24 +7,23 @@ var nodemailer = require('nodemailer');
 
 router.post('/contact', async (req, res) => {
     try {
-// console.log(req.body);
 
-        let transporter = nodemailer.createTransport({
-            host: "smtp.mail.wowway.com", //"smtp.mail.wowway.com",
-            // host: "smtpauth.mail.wowway.com/",
 
+          let transporter = nodemailer.createTransport({
+            host: "smtp.mailgun.org", 
             port: 587,
             secure: false, // true for 465, false for other ports
             auth: {
-              user: process.env.EMAIL_USER, // generated ethereal user
-              pass: process.env.EMAIL_PASSWORD, // generated ethereal password
+              user: process.env.MAILGUN_SMTP_LOGIN, // generated ethereal user
+              pass: process.env.MAILGUN_SMTP_PASSWORD, // generated ethereal password
             },
           });
           
-          var mailOptions = {
-            from: '"Portfolio Message" <jcorozco@wowway.com>',
+
+          var mailGunOptions = {
+            from: '"Portfolio Message" <postmaster@sandbox18733c83e98e444ab4d5be9986a7cc79.mailgun.org>',
             to: 'jcorozco@gmail.com',
-            cc: 'jcorozco@wowway.com',
+            cc: '',
             subject: 'Portfolio: Contact-me new message:',
             text: `From: ${req.body.fullname}<${req.body.email}> Message Body: ${req.body.body}.`,
             html: `
@@ -34,7 +33,7 @@ router.post('/contact', async (req, res) => {
             <p>${req.body.body}</p>`, // html body
           };
           
-          transporter.sendMail(mailOptions, function(error, info){
+          transporter.sendMail(mailGunOptions, function(error, info){
             if (error) {
               console.log(error);
             } else {
