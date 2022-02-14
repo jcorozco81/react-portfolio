@@ -1,6 +1,8 @@
 /* .header-txt { */
 * {
   font-family: "Coda";
+/* background-color: #F9F6EE */
+;
 }
 
 .nav-title {
@@ -11,6 +13,10 @@
 .navbar{
   width: 90%;
   margin: auto;
+}
+
+.container{
+  max-width: 95%;
 }
 
 

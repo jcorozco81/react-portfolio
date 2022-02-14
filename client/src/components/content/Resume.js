@@ -5,6 +5,24 @@ import certificate from "../../assets/documents/fswd-coding-bootcamp-cert-jco.pd
 function Resume() {
   return (
     <div className="container">
+
+
+<span class="tag is-primary is-light">Bulma</span>
+<span class="tag is-link is-light"> jQuery</span>
+<span class="tag is-info is-light">Handlebars</span>
+<span class="tag is-success is-light">node.js</span>
+<span class="tag is-warning is-light">express.js</span>
+<span class="tag is-danger is-light">graphQL</span>
+<span class="tag is-light">Bootstrap</span>
+<span class="tag is-primary">HTML</span>
+<span class="tag is-link">CSS</span>
+<span class="tag is-info">React</span>
+<span class="tag is-success">MongoDB</span>
+<span class="tag is-warning">JavaScript</span>
+<span class="tag is-danger">mySQL</span>
+
+
+
       <p className="title section-title" id="my-resume">
         Skills and Resume:
       </p>

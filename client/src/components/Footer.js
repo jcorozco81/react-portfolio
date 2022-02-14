@@ -35,7 +35,7 @@ function Footer() {
                     onClick={(e) => {
                       e.preventDefault();
                       window.open(
-                        "https://www.linkedin.com/in/juan-carlos-orozco-b6276434/"
+                        "https://www.linkedin.com/in/jcorozcoleon/"
                       );
                     }}
                   >
