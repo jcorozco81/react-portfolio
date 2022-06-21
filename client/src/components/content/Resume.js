@@ -7,7 +7,7 @@ function Resume() {
     <div className="container">
 
 
-<span class="tag is-primary is-light">Bulma</span>
+{/* <span class="tag is-primary is-light">Bulma</span>
 <span class="tag is-link is-light"> jQuery</span>
 <span class="tag is-info is-light">Handlebars</span>
 <span class="tag is-success is-light">node.js</span>
@@ -19,7 +19,7 @@ function Resume() {
 <span class="tag is-info">React</span>
 <span class="tag is-success">MongoDB</span>
 <span class="tag is-warning">JavaScript</span>
-<span class="tag is-danger">mySQL</span>
+<span class="tag is-danger">mySQL</span> */}
 
 
 
