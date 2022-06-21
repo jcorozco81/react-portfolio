@@ -8,5 +8,20 @@
         "fullname": "Java",
         "email": "Java@email.com",
         "body": "This is another test message"
-      }
+      },
+      {
+          "fullname": "Java",
+          "email": "Java@email.com",
+          "body": "This is another test message 2"
+        },
+        {
+            "fullname": "Java",
+            "email": "Java@email.com",
+            "body": "This is another test message 3"
+          },
+          {
+              "fullname": "Java",
+              "email": "Java@email.com",
+              "body": "This is another test message 4"
+            }
   ]

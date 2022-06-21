@@ -6,6 +6,7 @@ type Message {
     fullname: String
     email: String
     body: String
+    date_sent: String
 }
 
 type Query {

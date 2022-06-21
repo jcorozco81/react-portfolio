@@ -1,4 +1,6 @@
 const { Schema, model } = require('mongoose');
+const dateFormat = require('../utils/dateFormat');
+
 
 const messageSchema = new Schema({
 
@@ -17,9 +19,10 @@ body:{
     required: true,
     trim: true,
 },
-date: {
+date_sent: {
     type: Date,
-    default: Date.now
+    default: Date.now,
+    get: (timestamp) => dateFormat(timestamp),
   }
 
 });
