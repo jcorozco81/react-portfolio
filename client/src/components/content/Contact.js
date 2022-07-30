@@ -8,7 +8,6 @@ import { useMutation } from "@apollo/client";
 import { ADD_MESSAGE } from "../../utils/mutations";
 
 // Recaptcha
-const SITE_KEY = "6Lc0rvogAAAAAATUmWHtwcmVSZWFngzsXsOolIu4";
 
 function Contact() {
   // Recaptcha
@@ -34,7 +33,7 @@ function Contact() {
     // load the script by passing the URL
     loadScriptByURL(
       "recaptcha-key",
-      `https://www.google.com/recaptcha/api.js?render=${SITE_KEY}`,
+      `https://www.google.com/recaptcha/api.js?render=${process.env.REACT_APP_SITE_KEY}`,
       function () {
         console.log("Script loaded!");
       }
@@ -115,7 +114,7 @@ function Contact() {
       // setLoading(true);
       window.grecaptcha.ready(() => {
         window.grecaptcha
-          .execute(SITE_KEY, { action: "submit" })
+          .execute(process.env.REACT_APP_SITE_KEY, { action: "submit" })
           .then((token) => {
             // console.log(token);
             // submitToken(token);

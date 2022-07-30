@@ -14,7 +14,7 @@ let transporter = nodemailer.createTransport({
 });
 
 router.post("/contact", async (req, res) => {
-  const requestURL = `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.SECRET_KEY_B}&response=${req.body.token}`;
+  const requestURL = `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.SECRET_KEY}&response=${req.body.token}`;
 
   var mailGunOptions = {
     from: '"Portfolio Message"<postmaster@sandbox18733c83e98e444ab4d5be9986a7cc79.mailgun.org>',

@@ -10,6 +10,9 @@ import {
 } from 'react-google-recaptcha-v3';
 
 
+require('dotenv').config()
+
+const site_key = process.env.REACT_APP_SITE_KEY;
 
 
 
@@ -26,7 +29,7 @@ ReactDOM.render(
   <React.StrictMode>
 
 <GoogleReCaptchaProvider
-    reCaptchaKey="6Lc0rvogAAAAAATUmWHtwcmVSZWFngzsXsOolIu4"
+    reCaptchaKey="6LehUfggAAAAAL94ibQ6ikhOLBphTvphzvZfUAyP"
     // language="[optional_language]"
     // useRecaptchaNet="[optional_boolean_value]"
     // useEnterprise="[optional_boolean_value]"
