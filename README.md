@@ -28,30 +28,17 @@ My React Portfolio
 ## Installation
 ***
 
-The application is deployed at the following address: [My React Portfolio](https://jcorozco81.github.io/react-portfolio/). Local installation is optional.
-
-To complete the local installation, following these instructions:
-    
-1. To install a Node JS project, install [Node JS](https://nodejs.org/)       
-
-2. Clone the GitHub repository to you local computer. Click on the following link.
- 
-  * Repository link : https://github.com/jcorozco81/react-portfolio
-
-3. To install the packages listed in the ```package.json``` file, run ```npm i```.
+The application is deployed at the following address: [My React Portfolio](https://juan-orozco-portfolio.herokuapp.com/).
 
 
 
 ## Usage
 ***
    
-1. If the application for was installed locally, start the application by running the following command ```npm start```. A web browser window will be automatically opened with the website.
-
-Or
-
-1. The deployed application can be found at the followign address: [My React Portfolio](https://jcorozco81.github.io/react-portfolio/)
+1. The deployed application can be found at the followign address: [My React Portfolio](https://juan-orozco-portfolio.herokuapp.com/)
   
- ![My React Portfolio screenshot](./src/assets/images/react-portfolio.PNG)
+ ![My React Portfolio screenshot](./src/assets/images/react-portfolio-screenshot.PNG)
+ 
 
 ## How to Contribute
 ***
@@ -80,7 +67,7 @@ Or
 ## License
 ***
 
-Copyright (c) 2021 jcorozco81.
+Copyright (c) 2022 jcorozco81.
 
 
 

@@ -7,6 +7,16 @@ const resolvers = {
     },
   },
 
+
+// reference
+    // Mutation: {
+    //   addMessage: async (parent, { fullname, email, body }) => {
+    //     const message = await Message.create({ fullname, email, body });
+    //     console.log(message);
+    //     return message;
+    //   },
+    // },
+
     Mutation: {
       addMessage: async (parent, { fullname, email, body }) => {
         const message = await Message.create({ fullname, email, body });

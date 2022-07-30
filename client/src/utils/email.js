@@ -1,25 +1,24 @@
-// Post to server
+import axios from "axios";
+export const sendEmail = async (data, token) => {
 
-// const reqTest = {
-//     fullname: "Cyndi",
-//     email: "cyndisoto@gmail.com",
-//     body: "This is a test message",
-//   };
+  let emailID;
 
-export const sendEmail = async (emailData) => {
-console.log(emailData);
-
-  const response = await fetch(`/contact/`, {
+data.token = token;
+// console.log(token);
+// console.log(data);
+try {
+const response = await axios ({
     method: "POST",
-    body: JSON.stringify(emailData),
-    headers: { "Content-Type": "application/json" },
-  });
+    url: `/contact`,
+    body: JSON.stringify(data),
+    headers: { "Content-Type": "application/json" }});
 
-  if (response.ok) {
-    console.log("Sent to route");
-  } else {
-    alert("Test" + response.statusText);
-  }
+    console.log("Completed with result:", response.data.messageId);
+emailID = response.data.messageId;
+}catch (err) {
+  console.log(err)
+}
+  return ("RESPONSE OK: ", emailID);
 };
 
 

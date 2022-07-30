@@ -1,12 +1,46 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import { checkEmail } from "../../utils/helper";
 import { sendEmail } from "../../utils/email";
+
 // Mutations
 import { useMutation } from "@apollo/client";
 import { ADD_MESSAGE } from "../../utils/mutations";
 
+// Recaptcha
+const SITE_KEY = "6Lc0rvogAAAAAATUmWHtwcmVSZWFngzsXsOolIu4";
+
 function Contact() {
+  // Recaptcha
+
+  useEffect(() => {
+    const loadScriptByURL = (id, url, callback) => {
+      const isScriptExist = document.getElementById(id);
+
+      if (!isScriptExist) {
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        script.src = url;
+        script.id = id;
+        script.onload = function () {
+          if (callback) callback();
+        };
+        document.body.appendChild(script);
+      }
+
+      if (isScriptExist && callback) callback();
+    };
+
+    // load the script by passing the URL
+    loadScriptByURL(
+      "recaptcha-key",
+      `https://www.google.com/recaptcha/api.js?render=${SITE_KEY}`,
+      function () {
+        console.log("Script loaded!");
+      }
+    );
+  }, []);
+
   const [email, setEmail] = useState("");
   const [fullname, setfullname] = useState("");
   const [message, setmessage] = useState("");
@@ -19,9 +53,9 @@ function Contact() {
 
   const [createMessage, { error }] = useMutation(ADD_MESSAGE);
   const [formData, setformData] = useState({
-    fullname: '',
-    email: '',
-    body: '',
+    fullname: "",
+    email: "",
+    body: "",
   });
 
   const handleChange = (event) => {
@@ -29,11 +63,8 @@ function Contact() {
     const inputID = target.id;
     const formID = target.formid;
     const inputValue = target.value;
-    
+
     setformData({ ...formData, [formID]: inputValue });
-    // console.log(target);
-    // console.log(inputValue);
-    // console.log(formData);
 
     if (inputID === "input-email") {
       setEmail(inputValue);
@@ -41,11 +72,9 @@ function Contact() {
     } else if (inputID === "input-name") {
       setfullname(inputValue);
       setformData({ ...formData, fullname: inputValue });
-
     } else {
       setmessage(inputValue);
       setformData({ ...formData, body: inputValue });
-
     }
   };
 
@@ -77,46 +106,43 @@ function Contact() {
     }
   };
 
-  const submitForm = async (event) => {
-    event.preventDefault();
+  const handleOnClick = (e) => {
+    e.preventDefault();
 
     if (!fullname || !checkEmail(email) || !message) {
-      // if (!fullname) {
-      //   seterrorName(emptyFields);
-      // } else {
-      //   seterrorName("");
-      // }
-      // if (!checkEmail(email)) {
-      //   seterrorEmail(invalidEmailMessage);
-      // } else {
-      //   seterrorEmail("");
-      // }
-      // if (!message) {
-      //   setErrorMessage(emptyFields);
-      // } else {
-      //   setErrorMessage("");
-      // }
       alert(`Error: Message not sent. Verify fields.`);
     } else {
-      try {
-        // console.log({formData});
-        const { data } = await createMessage({ variables: { ...formData } });
-        sendEmail(formData);
-        alert("Message Sent");
-        // console.log(data);
-      } catch (err) {
-        console.error(err);
-      }
-  
-      // `Hello ${fullname}! You Email is ${email} and you message: ${message}`
+      // setLoading(true);
+      window.grecaptcha.ready(() => {
+        window.grecaptcha
+          .execute(SITE_KEY, { action: "submit" })
+          .then((token) => {
+            // console.log(token);
+            // submitToken(token);
+            submitForm(token);
 
-      setfullname("");
-      setEmail("");
-      setmessage("");
-      seterrorName("");
-      seterrorEmail("");
-      setErrorMessage("");
+          });
+      });
     }
+      const submitForm = async (token) => {
+        try {
+          const { data } = await createMessage({ variables: { ...formData } });
+          // console.log(data);
+          const res = await sendEmail(formData, token);
+          console.log(res);
+          alert("Message Sent");
+        } catch (err) {
+          console.error(err);
+        }
+
+        setfullname("");
+        setEmail("");
+        setmessage("");
+        seterrorName("");
+        seterrorEmail("");
+        setErrorMessage("");
+      };
+ 
   };
 
   return (
@@ -126,7 +152,7 @@ function Contact() {
       </p>
       <div className="columns">
         <div className="column is-two-thirds">
-          <form>
+          <form id="demo-form">
             <div className="col">
               <div className="row m-3">
                 <label className="form-label">
@@ -182,9 +208,13 @@ function Contact() {
               <div className="row m-3">
                 <div className="buttons">
                   <button
-                    className="button is-info"
+                    className="button is-info g-recaptcha"
                     id="submit"
-                    onClick={submitForm}
+                    data-sitekey="6Lc0rvogAAAAAATUmWHtwcmVSZWFngzsXsOolIu4"
+                    data-callback="onSubmit"
+                    data-action="submit"
+                    // onClick={submitForm}
+                    onClick={handleOnClick}
                   >
                     Submit
                   </button>
