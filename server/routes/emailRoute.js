@@ -39,7 +39,7 @@ router.post("/contact", async (req, res) => {
     // headers: { "Content-Type": "application/json" },
   };
   try {
-    console.log(searchData);
+    // console.log(searchData);
     const response = await axios(searchData);
     // console.log(response);
 
