@@ -41,7 +41,7 @@ router.post("/contact", async (req, res) => {
   try {
     console.log(searchData);
     const response = await axios(searchData);
-    console.log(response);
+    // console.log(response);
 
     if (response.status === 200) {
       console.log("recaptcha success? " + response.statusText);
