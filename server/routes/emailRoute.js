@@ -14,6 +14,9 @@ let transporter = nodemailer.createTransport({
 });
 
 router.post("/contact", async (req, res) => {
+
+  console.log(req);
+  console.log(req.body);
   const requestURL = `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.SECRET_KEY}&response=${req.body.token}`;
 
   var mailGunOptions = {
