@@ -13,24 +13,27 @@ let transporter = nodemailer.createTransport({
   },
 });
 
-router.post("/contact", async (req, res) => {
+router.post("/Contact", async (req, res) => {
 
-  console.log(req);
-  console.log(req.body);
-  const requestURL = `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.SECRET_KEY}&response=${req.body.token}`;
+  console.log(req.body.data);
+  const requestURL = `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.SECRET_KEY}&response=${req.body.data.token}`;
 
+  console.log(requestURL);
   var mailGunOptions = {
     from: '"Portfolio Message"<postmaster@sandbox18733c83e98e444ab4d5be9986a7cc79.mailgun.org>',
     to: "jcorozco@gmail.com",
     cc: "",
     subject: "Portfolio - Contact-me new message:",
-    text: `From: ${req.body.fullname}<${req.body.email}> Message Body: ${req.body.body}.`,
+    text: `From: ${req.body.data.fullname}<${req.body.data.email}> Message Body: ${req.body.data.body}.`,
     html: `
         <h2>New message from:</h2>
-        <h4>Name: ${req.body.fullname}</h4>
-        <h4>Email: ${req.body.email}</h4>
-        <p>${req.body.body}</p>`, // html body
+        <h4>Name: ${req.body.data.fullname}</h4>
+        <h4>Email: ${req.body.data.email}</h4>
+        <p>${req.body.data.body}</p>`, // html body
   };
+  console.log(mailGunOptions);
+
+
 
   const searchData = {
     url: requestURL,
@@ -41,10 +44,10 @@ router.post("/contact", async (req, res) => {
   try {
     // console.log(searchData);
     const response = await axios(searchData);
-    // console.log(response);
+    console.log(response);
 
-    if (response.status === 200) {
-      console.log("recaptcha success? " + response.statusText);
+    if (response.data.success) {
+      console.log("recaptcha success? " + response.data.success);
 
       await transporter.sendMail(mailGunOptions, function (error, info) {
         if (error) {
@@ -60,6 +63,9 @@ router.post("/contact", async (req, res) => {
       alert("recaptcha failed:" + response.statusText);
     }
   } catch (err) {}
+
+
+
 });
 
 module.exports = router;
