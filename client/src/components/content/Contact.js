@@ -126,7 +126,7 @@ function Contact() {
       const submitForm = async (token) => {
         try {
           const { data } = await createMessage({ variables: { ...formData } });
-          // console.log(data);
+          console.log(data);
           const res = await sendEmail(formData, token);
           console.log(res);
           alert("Message Sent");

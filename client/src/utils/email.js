@@ -4,8 +4,8 @@ export const sendEmail = async (data, token) => {
   let emailID;
 
 data.token = token;
-// console.log(token);
-// console.log(data);
+console.log(token);
+console.log(data);
 try {
 const response = await axios ({
     method: "POST",
