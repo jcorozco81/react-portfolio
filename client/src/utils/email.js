@@ -1,21 +1,16 @@
 import axios from "axios";
-export const sendEmail = async (data, token) => {
-  let emailID;
-
-  data.token = token;
+export const sendEmail = async (token) => {
   // console.log(token);
-  // console.log(data);
+
   try {
     const response = await axios.post(`/Contact`, {
-      data,
-      // body: JSON.stringify(data),
+      token,
       headers: { "Content-Type": "application/json" },
     });
 
-    console.log("Completed with result:", response.data.messageId);
-    emailID = response.data.messageId;
+    // console.log(response);
   } catch (err) {
     console.log(err);
   }
-  return "RESPONSE OK: ", emailID;
+  return true;
 };

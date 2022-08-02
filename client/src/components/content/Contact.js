@@ -119,29 +119,27 @@ function Contact() {
             // console.log(token);
             // submitToken(token);
             submitForm(token);
-
           });
       });
     }
-      const submitForm = async (token) => {
-        try {
+    const submitForm = async (token) => {
+      try {
+        const res = await sendEmail(token);
+        // console.log(res);
+        if (res) {
           const { data } = await createMessage({ variables: { ...formData } });
-          // console.log(data);
-          const res = await sendEmail(formData, token);
-          // console.log(res);
-          alert("Message Sent");
-        } catch (err) {
-          console.error(err);
+          setfullname("");
+          setEmail("");
+          setmessage("");
+          seterrorName("");
+          seterrorEmail("");
+          setErrorMessage("");
+          alert("Message Sent"); //add modal instead of alert
         }
-
-        setfullname("");
-        setEmail("");
-        setmessage("");
-        seterrorName("");
-        seterrorEmail("");
-        setErrorMessage("");
-      };
- 
+      } catch (err) {
+        console.error(err);
+      }
+    };
   };
 
   return (
